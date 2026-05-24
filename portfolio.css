@@ -151,7 +151,8 @@ nav{
 }
 
 .hero-code-block{
-    flex:0 0 380px;
+    width:100%;
+max-width:380px;
     min-width:320px;
     background:rgba(6,27,59,0.95);
     border:1px solid rgba(16,185,129,0.7);
@@ -790,7 +791,9 @@ footer{
 @media(max-width:1100px){
     .hero-container{
         flex-direction:column;
+        align-items:flex-start;
         text-align:center;
+        gap:32px;
     }
 
     .hero-code-block{
@@ -816,21 +819,99 @@ footer{
     }
 }
 
-@media(max-width:768px){
+@media(max-width:900px){
     .hero{
-        padding:120px 5% 60px;
+        padding:160px 6% 60px;
     }
 
     .hero-container{
-        gap:30px;
-        padding:40px 24px;
+        gap:20px;
+        padding:40px 20px;
+    }
+
+    .hero-container{
+        flex-wrap:wrap;
+        justify-content:center;
     }
 
     .hero-code-block{
+        flex:1 1 100%;
         max-width:100%;
-        padding:24px;
-        margin-top:24px;
+        min-width:auto;
+        width:100%;
+        margin-top:28px;
     }
+
+    .hero-code-block pre{
+        white-space:pre-wrap;
+        word-break:break-word;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+        gap:14px;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+        max-width:400px;
+    }
+
+    .hero-text h1{
+        font-size:48px;
+    }
+
+    .hero-text p{
+        font-size:16px;
+        max-width:100%;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:14px;
+    }
+}
+
+@media(max-width:768px){
+    .hero{
+        padding:180px 5% 60px;
+    }
+
+    .hero-container{
+        padding:34px 20px;
+    }
+
+   .hero-code-block{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    flex:none;
+
+    padding:18px;
+    margin-top:25px;
+
+    overflow:hidden;
+    border-radius:22px;
+}
+
+.hero-code-block pre{
+    width:100%;
+    overflow-x:auto;
+
+    white-space:pre-wrap;
+    word-break:break-word;
+
+    font-size:13px;
+    line-height:1.6;
+
+    padding:16px;
+}
 
     .hero-text h1{
         font-size:42px;
@@ -841,43 +922,37 @@ footer{
         font-size:15px;
     }
 
-    .hero-buttons{
-        flex-direction:column;
-        align-items:center;
-    }
-
     .hero-buttons .btn{
         width:100%;
-        max-width:320px;
+        max-width:100%;
     }
 
-    .stats{
-        grid-template-columns:1fr;
-    }
-
-    .nav-links{
-        flex-wrap:wrap;
+    .scroll-arrow{
         justify-content:center;
-        gap:16px;
     }
 }
 
 @media(max-width:600px){
     .hero{
-        padding:100px 4% 50px;
+        padding:190px 4% 50px;
     }
 
     .hero-container{
-        padding:30px 20px;
+        padding:30px 16px;
     }
 
     .hero-text h1{
-        font-size:34px;
+        font-size:36px;
     }
 
     .hero-code-block{
-        padding:20px;
-    }
+    width:100%;
+    max-width:100%;
+    min-width:0;
+
+    padding:16px;
+    overflow:hidden;
+}
 
     .hero-code-block .code-header,
     .hero-code-block .code-footer{
@@ -945,3 +1020,62 @@ html{
 /* Make keyboard focus visible and consistent with pop animation */
 :focus{ outline:none; }
 :focus-visible{ box-shadow:0 0 0 4px rgba(0,191,255,0.08); border-radius:8px; }
+/* FINAL MOBILE FIX */
+
+@media(max-width:768px){
+
+    nav{
+        padding:18px 5%;
+        flex-direction:column;
+        gap:16px;
+    }
+
+    .hero{
+        padding-top:280px;
+    }
+
+    .hero-container{
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+        overflow:hidden;
+    }
+
+    .hero-text{
+        width:100%;
+    }
+
+    .hero-code-block{
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        margin-top:24px;
+    }
+
+    .hero-code-block pre{
+        overflow-x:auto;
+        white-space:pre-wrap;
+        word-break:break-word;
+    }
+}
+
+@media(max-width:480px){
+
+    .hero{
+        padding-top:320px;
+    }
+
+    .hero-text h1{
+        font-size:32px;
+    }
+
+    .hero-code-block{
+        padding:14px;
+    }
+
+    .hero-code-block pre{
+        font-size:12px;
+        padding:14px;
+    }
+}
