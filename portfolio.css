@@ -148,8 +148,8 @@ nav{
 }
 
 .hero-code-block{
-    flex:0 0 360px;
-    min-width:300px;
+    flex:0 0 380px;
+    min-width:320px;
     background:rgba(6,27,59,0.95);
     border:1px solid rgba(0,191,255,0.16);
     border-radius:30px;
@@ -159,6 +159,7 @@ nav{
     position:relative;
     overflow:hidden;
     animation:floatBlock 6s ease-in-out infinite;
+    align-self:flex-start;
 }
 
 .hero-code-block .code-header,
@@ -169,20 +170,31 @@ nav{
 }
 
 .hero-code-block pre{
-    background:rgba(1,12,30,0.95);
+    background:rgba(1,12,30,0.98);
     border-radius:22px;
     padding:22px;
     color:#cbd5e1;
     font-family:'Fira Code', 'Courier New', monospace;
     font-size:14px;
     line-height:1.8;
-    white-space:pre-wrap;
+    white-space:pre;
     overflow-x:auto;
 }
 
 .hero-code-block code{
     display:block;
 }
+
+.token-tag{ color:#7c3aed; }
+.token-keyword{ color:#38bdf8; }
+.token-string{ color:#a5f3fc; }
+.token-punctuation{ color:#f8b195; }
+
+.hero-code-block .token-keyword::after{
+    content:' ';
+}
+
+.hero-code-block .token-tag{ font-weight:700; }
 
 .hero-code-block::before{
     content:'';
@@ -772,18 +784,18 @@ footer{
         text-align:center;
     }
 
+    .hero-code-block{
+        width:100%;
+        max-width:620px;
+        margin:20px auto 0;
+    }
+
     .hero-buttons{
         justify-content:center;
     }
 
     .scroll-down{
         justify-content:center;
-    }
-
-    .hero-code-block{
-        width:100%;
-        max-width:620px;
-        margin:20px auto 0;
     }
 
     .hero-text h1{
