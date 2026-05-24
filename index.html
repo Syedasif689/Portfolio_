@@ -239,17 +239,6 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-    const obs = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add('in-view');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
     // Smooth anchor scrolling with header offset
     const nav = document.querySelector('nav');
     function headerOffset(){ return nav ? nav.offsetHeight + 12 : 84; }

@@ -352,16 +352,15 @@ a, .btn, .skill, .project-card, .nav-links a{ transition:all 260ms cubic-bezier(
     .image-card:hover{ transform:none; }
 }
 
-/* Reveal on scroll: smooth slide-up */
+/* Reveal on scroll: disabled for static display */
 .reveal{
-    opacity:0;
-    transform:translateY(24px);
-    transition:opacity 700ms cubic-bezier(.2,.9,.2,1), transform 700ms cubic-bezier(.2,.9,.2,1);
-    will-change:transform, opacity;
+    opacity:1;
+    transform:none;
+    transition:none;
 }
 .reveal.in-view{
     opacity:1;
-    transform:translateY(0);
+    transform:none;
 }
 
 /* Ensure cards participate in reveal animation */
