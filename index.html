@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 <title>Syed Asif | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="portfolio.css">
@@ -11,7 +11,6 @@
 
 <nav>
     <div class="logo">ASIF.</div>
-
     <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#projects">Projects</a>
@@ -22,52 +21,51 @@
     </div>
 </nav>
 
+<!-- Hero Section with side-by-side cards (mobile friendly) -->
 <section class="hero" id="home">
-    <div class="hero-container">
-
-        <div class="hero-text">
-            <h4>FULL STACK DEVELOPER</h4>
-
-            <h1>Hello, I'm <span>Syed Asif</span></h1>
-
-            <p>
-                I build professional full stack web applications, AI-powered systems,
-                modern dashboards, and responsive digital experiences with clean UI,
-                scalable backend architecture, and smooth user interactions.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn">View My Work</a>
-                <a href="#contact" class="btn secondary-btn">Hire Me</a>
-            </div>
-
-            <div class="scroll-down">
-                <a href="#projects" class="scroll-arrow" aria-label="Scroll to Projects">
-                    <span></span>
-                </a>
-            </div>
-
-            <div class="stats">
-                <div class="stat-box reveal">
-                    <h2>10+</h2>
-                    <p>Projects Built</p>
+    <div class="hero-wrapper">
+        
+        <!-- Left Side: Hero Text Card -->
+        <div class="hero-card">
+            <div class="hero-text">
+                <h4>FULL STACK DEVELOPER</h4>
+                <h1>Hello, I'm <span>Syed Asif</span></h1>
+                <p>
+                    I build professional full stack web applications, AI-powered systems,
+                    modern dashboards, and responsive digital experiences with clean UI,
+                    scalable backend architecture, and smooth user interactions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn">View My Work</a>
+                    <a href="#contact" class="btn secondary-btn">Hire Me</a>
                 </div>
-
-                <div class="stat-box">
-                    <h2>Full</h2>
-                    <p>Stack Development</p>
+                <div class="scroll-down">
+                    <a href="#projects" class="scroll-arrow" aria-label="Scroll to Projects">
+                        <span></span>
+                    </a>
                 </div>
-
-                <div class="stat-box">
-                    <h2>AI</h2>
-                    <p>Smart Solutions</p>
+                <div class="stats">
+                    <div class="stat-box">
+                        <h2>10+</h2>
+                        <p>Projects Built</p>
+                    </div>
+                    <div class="stat-box">
+                        <h2>Full</h2>
+                        <p>Stack Development</p>
+                    </div>
+                    <div class="stat-box">
+                        <h2>AI</h2>
+                        <p>Smart Solutions</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="hero-code-block reveal">
-            <div class="code-header">&lt;about&gt;</div>
-            <pre><code>
+        <!-- Right Side: Code Detail Card (Separate) -->
+        <div class="code-card">
+            <div class="hero-code-block">
+                <div class="code-header">&lt;about&gt;</div>
+                <pre><code>
 <span class="token-tag">&lt;profile&gt;</span>
   <span class="token-keyword">name</span><span class="token-punctuation">: </span> <span class="token-string">"Syed Asif"</span>
   <span class="token-keyword">role</span><span class="token-punctuation">: </span> <span class="token-string">"Full Stack Developer"</span>
@@ -81,13 +79,12 @@
                 <span class="token-string">"CSS"</span>
                 <span class="token-string">"JavaScript"</span>
                 <span class="token-string">"Spring Boot"</span>
-    <span class="token-string">"MySQL"</span>
+                <span class="token-string">"MySQL"</span>
 <span class="token-tag">&lt;/profile&gt;</span>
-            </code></pre>
-            <div class="code-footer">&lt;/about&gt;</div>
+                </code></pre>
+                <div class="code-footer">&lt;/about&gt;</div>
+            </div>
         </div>
-
-        <!-- image card removed as requested -->
 
     </div>
 </section>
@@ -97,10 +94,8 @@
         <h2>Featured Projects</h2>
         <p>Professional applications and modern development projects</p>
     </div>
-
     <div class="projects-grid">
-
-        <div class="project-card reveal">
+        <div class="project-card">
             <div>
                 <h3>DocGen Platform</h3>
                 <p>
@@ -109,26 +104,23 @@
                 </p>
             </div>
             <div class="project-actions">
-                <a href="https://docgen-get-your-document.onrender.com/" target="_blank" rel="noopener" class="btn primary-btn" aria-label="Open DocGen live demo">💻 Live Demo</a>
+                <a href="https://docgen-get-your-document.onrender.com/" target="_blank" rel="noopener" class="btn primary-btn">💻 Live Demo</a>
             </div>
         </div>
-
-        <div class="project-card reveal">
-            <h3>SmartInsight Dashboard generator</h3>
+        <div class="project-card">
+            <h3>SmartInsight Dashboard</h3>
             <p>
                 AI-powered dashboard generator that transforms uploaded data into beautiful,
-                understandable analytics dashboards and charts(workin in progress).
+                understandable analytics dashboards and charts (work in progress).
             </p>
         </div>
-
-        <div class="project-card reveal">
+        <div class="project-card">
             <h3>Enha Social Media</h3>
             <p>
                 Modern social media application with scalable architecture,
-                authentication system, and responsive UI experience(work in progress).
+                authentication system, and responsive UI experience (work in progress).
             </p>
         </div>
-
     </div>
 </section>
 
@@ -137,9 +129,8 @@
         <h2>Technical Skills</h2>
         <p>Technologies and tools I use for development</p>
     </div>
-
     <div class="skills-grid">
-        <div class="skill-card reveal">
+        <div class="skill-card">
             <h3>HTML5</h3>
             <p>Clean semantic markup for accessible, SEO-friendly frontend structure.</p>
         </div>
@@ -163,11 +154,11 @@
             <h3>Python</h3>
             <p>Automation, scripting, AI integration, and clean backend workflows.</p>
         </div>
-        <div class="skill-card reveal">
+        <div class="skill-card">
             <h3>MySQL</h3>
             <p>Reliable relational database design with optimized queries and schema structure.</p>
         </div>
-        <div class="skill-card reveal">
+        <div class="skill-card">
             <h3>AI Integration</h3>
             <p>Smart systems powered by model-driven features, data processing, and automation.</p>
         </div>
@@ -179,12 +170,10 @@
         <h2>Experience</h2>
         <p>My professional journey</p>
     </div>
-
     <div class="experience-box">
-        <div class="exp-item reveal">
+        <div class="exp-item">
             <h3>Full Stack Web Development Intern</h3>
             <span>Future Interns • 2026</span>
-
             <p>
                 Working on responsive web systems, backend integrations,
                 deployment pipelines, and professional UI experiences.
@@ -198,23 +187,19 @@
         <h2>Education</h2>
         <p>Academic background and qualifications</p>
     </div>
-
     <div class="education-box">
         <div class="education-grid">
-            <div class="education-card reveal">
+            <div class="education-card">
                 <h3>BTech Computer Science</h3>
                 <span>4th Year Engineering Student</span>
-
                 <p>
                     Focused on software engineering, artificial intelligence,
                     database systems, operating systems, and scalable application development.
                 </p>
             </div>
-
-            <div class="education-card reveal">
+            <div class="education-card">
                 <h3>Certifications & Courses</h3>
                 <span>Ongoing</span>
-
                 <p>
                     Add certification names, online courses, and workshops here.
                 </p>
@@ -233,22 +218,18 @@
                     professional software solutions? Use the contact cards to reach me directly.
                 </p>
             </div>
-
             <div class="contact-cards">
                 <div class="contact-card">
-                    <a href="mailto:email-asifsaed635@gmail.com" class="contact-link">Visit my @email</a>
+                    <a href="mailto:email-asifsaed635@gmail.com" class="contact-link">📧 Visit my @email</a>
                 </div>
-
                 <div class="contact-card">
-                    <a href="https://github.com/Syedasif689" target="_blank" rel="noopener" class="contact-link">GitHub — Syedasif689</a>
+                    <a href="https://github.com/Syedasif689" target="_blank" rel="noopener" class="contact-link">🐙 GitHub — Syedasif689</a>
                 </div>
-
                 <div class="contact-card">
-                    <a href="https://www.linkedin.com/in/syed-asif-a68a85291/" target="_blank" rel="noopener" class="contact-link">LinkedIn — Syed Asif</a>
+                    <a href="https://www.linkedin.com/in/syed-asif-a68a85291/" target="_blank" rel="noopener" class="contact-link">🔗 LinkedIn — Syed Asif</a>
                 </div>
-
                 <div class="contact-card">
-                    <a href="tel:+918125814157" class="contact-link">+91 8125814157</a>
+                    <a href="tel:+918125814157" class="contact-link">📞 +91 8125814157</a>
                 </div>
             </div>
         </div>
@@ -278,8 +259,25 @@ document.addEventListener('DOMContentLoaded', function(){
                     history.replaceState(null, '', href);
                 }
             }
-        }, { passive: true });
+        });
     });
+
+    // Mobile menu toggle for better mobile experience
+    const navLinks = document.querySelector('.nav-links');
+    const logo = document.querySelector('.logo');
+    
+    if (window.innerWidth <= 768) {
+        // Add touch-friendly improvements
+        const allLinks = document.querySelectorAll('.nav-links a');
+        allLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Close mobile menu if needed
+                setTimeout(() => {
+                    // Smooth scroll already handled
+                }, 100);
+            });
+        });
+    }
 
     // Popup click animation for interactive elements
     const interactiveSelector = '.btn, .contact-link, .nav-links a, .project-card, .skill-card, .education-card, .contact-card, .exp-item';
@@ -287,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function(){
         if(!el) return;
         el.classList.remove('pop');
         el.classList.remove('pop-glow');
-        void el.offsetWidth; // restart animation
+        void el.offsetWidth;
         el.classList.add('pop');
         el.classList.add('pop-glow');
         const tidy = () => {
@@ -301,17 +299,6 @@ document.addEventListener('DOMContentLoaded', function(){
     document.addEventListener('click', function(e){
         const btn = e.target.closest(interactiveSelector);
         if(btn) applyPop(btn);
-    }, { passive: true });
-    
-    // Also trigger pop when focus is placed into input-like elements or when pointer enters placeholders
-    const focusSelector = 'input, textarea, [contenteditable], [placeholder]';
-    document.addEventListener('focusin', function(e){
-        const t = e.target.closest(focusSelector);
-        if(t) applyPop(t);
-    });
-
-    document.querySelectorAll('[placeholder]').forEach(el => {
-        el.addEventListener('pointerenter', () => applyPop(el), { passive: true });
     });
 });
 </script>
