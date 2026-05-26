@@ -1,4 +1,45 @@
 document.addEventListener('DOMContentLoaded', function(){
+    const customCursor = document.createElement('div');
+    customCursor.className = 'custom-cursor is-hidden';
+    document.body.appendChild(customCursor);
+
+    let scrollTimer;
+    let lastMouseX = 0;
+    let lastMouseY = 0;
+    let isScrolling = false;
+    const pointerSelector = 'a, button, .btn, .contact-link, .nav-links a, .project-card, .skill-card, .education-card, .contact-card, .exp-item';
+
+    function updatePointerState(target){
+        const pointerTarget = target && target.closest(pointerSelector);
+        customCursor.classList.toggle('is-pointer', Boolean(pointerTarget) && !isScrolling);
+    }
+
+    document.addEventListener('mousemove', function(e){
+        lastMouseX = e.clientX;
+        lastMouseY = e.clientY;
+        customCursor.classList.remove('is-hidden');
+        customCursor.style.left = e.clientX + 'px';
+        customCursor.style.top = e.clientY + 'px';
+        updatePointerState(e.target);
+    });
+
+    document.addEventListener('mouseleave', function(){
+        customCursor.classList.add('is-hidden');
+        customCursor.classList.remove('is-pointer');
+    });
+
+    window.addEventListener('scroll', function(){
+        isScrolling = true;
+        customCursor.classList.add('is-scrolling');
+        customCursor.classList.remove('is-pointer');
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function(){
+            isScrolling = false;
+            customCursor.classList.remove('is-scrolling');
+            updatePointerState(document.elementFromPoint(lastMouseX, lastMouseY));
+        }, 180);
+    }, { passive: true });
+
     // Smooth anchor scrolling with header offset
     const nav = document.querySelector('nav');
     function headerOffset(){ return nav ? nav.offsetHeight + 12 : 84; }
