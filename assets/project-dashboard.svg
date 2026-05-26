@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Analytics dashboard charts">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#031225"/>
+      <stop offset=".55" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#164e63"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" fill="url(#bg)"/>
+  <circle cx="765" cy="105" r="165" fill="#2dd4bf" opacity=".16"/>
+  <rect x="86" y="86" width="728" height="348" rx="30" fill="#020617" opacity=".72"/>
+  <rect x="132" y="134" width="160" height="20" rx="10" fill="#67e8f9"/>
+  <rect x="132" y="194" width="170" height="170" rx="22" fill="#0f172a"/>
+  <path d="M164 308l44-48 38 25 34-64" fill="none" stroke="#00ff66" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="348" y="194" width="174" height="170" rx="22" fill="#0f172a"/>
+  <rect x="382" y="292" width="24" height="42" rx="10" fill="#38bdf8"/>
+  <rect x="426" y="252" width="24" height="82" rx="10" fill="#00ff66"/>
+  <rect x="470" y="220" width="24" height="114" rx="10" fill="#a5f3fc"/>
+  <rect x="568" y="194" width="174" height="170" rx="22" fill="#0f172a"/>
+  <circle cx="655" cy="279" r="54" fill="none" stroke="#38bdf8" stroke-width="24"/>
+  <path d="M655 225a54 54 0 0 1 46 82" fill="none" stroke="#00ff66" stroke-width="24" stroke-linecap="round"/>
+</svg>

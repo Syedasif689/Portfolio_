@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function(){
     let scrollTimer;
     let lastMouseX = 0;
     let lastMouseY = 0;
+    let cursorX = 0;
+    let cursorY = 0;
+    let cursorReady = false;
     let isScrolling = false;
     const pointerSelector = 'a, button, .btn, .contact-link, .nav-links a, .project-card, .skill-card, .education-card, .contact-card, .exp-item';
 
@@ -14,12 +17,24 @@ document.addEventListener('DOMContentLoaded', function(){
         customCursor.classList.toggle('is-pointer', Boolean(pointerTarget) && !isScrolling);
     }
 
+    function animateCursor(){
+        cursorX += (lastMouseX - cursorX) * 0.22;
+        cursorY += (lastMouseY - cursorY) * 0.22;
+        customCursor.style.left = cursorX + 'px';
+        customCursor.style.top = cursorY + 'px';
+        requestAnimationFrame(animateCursor);
+    }
+
     document.addEventListener('mousemove', function(e){
         lastMouseX = e.clientX;
         lastMouseY = e.clientY;
+        if(!cursorReady){
+            cursorReady = true;
+            cursorX = lastMouseX;
+            cursorY = lastMouseY;
+            requestAnimationFrame(animateCursor);
+        }
         customCursor.classList.remove('is-hidden');
-        customCursor.style.left = e.clientX + 'px';
-        customCursor.style.top = e.clientY + 'px';
         updatePointerState(e.target);
     });
 
