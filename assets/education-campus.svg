@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-label="Computer science education illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#031225"/>
+      <stop offset=".55" stop-color="#075985"/>
+      <stop offset="1" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="520" fill="url(#bg)"/>
+  <circle cx="610" cy="112" r="160" fill="#00ff66" opacity=".12"/>
+  <circle cx="128" cy="420" r="180" fill="#38bdf8" opacity=".14"/>
+  <path d="M132 176l248-92 248 92-248 94z" fill="#a5f3fc" opacity=".88"/>
+  <path d="M222 228v92c0 40 70 74 158 74s158-34 158-74v-92l-158 60z" fill="#075985" opacity=".9"/>
+  <path d="M628 176v122" stroke="#00ff66" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="628" cy="326" r="22" fill="#00ff66"/>
+  <rect x="196" y="286" width="368" height="144" rx="26" fill="url(#screen)" opacity=".92"/>
+  <rect x="236" y="326" width="112" height="14" rx="7" fill="#38bdf8"/>
+  <rect x="236" y="360" width="188" height="12" rx="6" fill="#a5f3fc" opacity=".7"/>
+  <rect x="236" y="390" width="146" height="12" rx="6" fill="#a5f3fc" opacity=".45"/>
+  <path d="M468 330l38 30-38 30" fill="none" stroke="#00ff66" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
