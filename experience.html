@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio | experience</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <div class="section-title">
+        <h2>Experience</h2>
+        <p>My professional journey</p>
+    </div>
+    <div class="experience-box">
+        <div class="exp-item">
+            <img src="assets/experience-dev.svg" alt="Developer workspace illustration" class="exp-image" onerror="this.style.display='none'">
+            <div class="exp-content">
+                <span>Excelr internship •2026</span>
+                <p>
+                    Working on responsive web systems, backend integrations,
+                    deployment pipelines, and professional UI experiences.
+                </p>
+            </div>
+        </div>
+    </div>
+<script>    
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+document.addEventListener('mouseleave', () => {
+    cursor.classList.add('is-hidden');
+});
+
+document.addEventListener('mouseenter', () => {
+    cursor.classList.remove('is-hidden');
+});
+</script>
+<footer>
+    <p>© 2026 Syed Asif • Professional Portfolio Website</p>
+</footer>
+</body>
+
+</html>

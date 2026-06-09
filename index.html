@@ -13,11 +13,11 @@
     <div class="logo">ASIF.</div>
     <div class="nav-links">
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
         <a href="#contact" class="contact-btn">Contact</a>
     </div>
 </nav>
@@ -26,16 +26,22 @@
 <section class="hero" id="home">
     <div class="hero-wrapper">
         
-        <!-- Left Side: Hero Text Card -->
+        <!-- Left Side: Hero Text Card with Circular Profile Image -->
         <div class="hero-card">
+            <!-- Profile Image Card: circular image beside name -->
+            <div class="profile-row">
+                <div class="profile-image-card">
+                    <div class="circle-image">
+                        <img src="assets/Myimage.jpg" alt="Syed Asif profile portrait">
+                    </div>
+                </div>
+                <div class="hero-headline">
+                    <h4>FULL STACK DEVELOPER</h4>
+                    <h1>Hello, I'm <span>Syed Asif</span></h1>
+                </div>
+            </div>
             <div class="hero-text">
-                <h4>FULL STACK DEVELOPER</h4>
-                <h1>Hello, I'm <span>Syed Asif</span></h1>
-                <p>
-                    I build professional full stack web applications, AI-powered systems,
-                    modern dashboards, and responsive digital experiences with clean UI,
-                    scalable backend architecture, and smooth user interactions.
-                </p>
+                
                 <div class="hero-buttons">
                     <a href="#projects" class="btn primary-btn">View My Work</a>
                     <a href="#contact" class="btn secondary-btn">Hire Me</a>
@@ -87,168 +93,6 @@
             </div>
         </div>
 
-    </div>
-</section>
-
-<section id="about">
-    <div class="section-title">
-        <h2>About Me</h2>
-        <p>A little more about how I build and think</p>
-    </div>
-    <div class="about-card">
-        <div class="about-content">
-            <h3>Full Stack Developer focused on practical, polished software</h3>
-            <p>
-                I am Syed Asif, a computer science engineering student who enjoys building
-                responsive web applications, clean backend systems, AI-powered tools, and
-                dashboards that make information easier to understand.
-            </p>
-            <p>
-                My work combines frontend detail, backend structure, database design, and
-                deployment thinking so projects feel complete from idea to live product.
-            </p>
-        </div>
-        <div class="about-highlights">
-            <div>
-                <span>01</span>
-                <p>Clean responsive interfaces</p>
-            </div>
-            <div>
-                <span>02</span>
-                <p>Scalable backend workflows</p>
-            </div>
-            <div>
-                <span>03</span>
-                <p>AI and dashboard features</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="projects">
-    <div class="section-title">
-        <h2>Featured Projects</h2>
-        <p>Professional applications and modern development projects</p>
-    </div>
-    <div class="projects-grid">
-        <div class="project-card project-card-docgen">
-            <div class="project-content">
-                <h3>DocGen Platform</h3>
-                <p>
-                    Advanced document generation platform with PDF export support for resumes,
-                    invitation cards, letters, and registration forms.
-                </p>
-            </div>
-            <div class="project-actions">
-                <a href="https://docgen-get-your-document.onrender.com/" target="_blank" rel="noopener" class="btn primary-btn">💻 Live Demo</a>
-            </div>
-        </div>
-        <div class="project-card project-card-dashboard">
-            <div class="project-content">
-                <h3>SmartInsight Dashboard</h3>
-                <p>
-                    AI-powered dashboard generator that transforms uploaded data into beautiful,
-                    understandable analytics dashboards and charts (work in progress).
-                </p>
-            </div>
-        </div>
-        <div class="project-card project-card-social">
-            <div class="project-content">
-                <h3>Enha Social Media</h3>
-                <p>
-                    Modern social media application with scalable architecture,
-                    authentication system, and responsive UI experience (work in progress).
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="skills">
-    <div class="section-title">
-        <h2>Technical Skills</h2>
-        <p>Technologies and tools I use for development</p>
-    </div>
-    <div class="skills-grid">
-        <div class="skill-card">
-            <h3>HTML5</h3>
-            <p>Clean semantic markup for accessible, SEO-friendly frontend structure.</p>
-        </div>
-        <div class="skill-card">
-            <h3>CSS3</h3>
-            <p>Responsive layouts, animations, and modern UI polish with grid and flexbox.</p>
-        </div>
-        <div class="skill-card">
-            <h3>JavaScript</h3>
-            <p>Interactive client-side behavior, DOM control, and modern ES6+ tooling.</p>
-        </div>
-        <div class="skill-card">
-            <h3>Java</h3>
-            <p>Robust backend architecture, object-oriented design, and scalable services.</p>
-        </div>
-        <div class="skill-card">
-            <h3>Spring Boot</h3>
-            <p>Rapid REST API development, dependency injection, and production-ready apps.</p>
-        </div>
-        <div class="skill-card">
-            <h3>Python</h3>
-            <p>Automation, scripting, AI integration, and clean backend workflows.</p>
-        </div>
-        <div class="skill-card">
-            <h3>MySQL</h3>
-            <p>Reliable relational database design with optimized queries and schema structure.</p>
-        </div>
-        <div class="skill-card">
-            <h3>AI Integration</h3>
-            <p>Smart systems powered by model-driven features, data processing, and automation.</p>
-        </div>
-    </div>
-</section>
-
-<section id="experience">
-    <div class="section-title">
-        <h2>Experience</h2>
-        <p>My professional journey</p>
-    </div>
-    <div class="experience-box">
-        <div class="exp-item">
-            <img src="assets/experience-dev.svg" alt="Developer workspace illustration" class="exp-image">
-            <div class="exp-content">
-                <h3>Full Stack Web Development Intern</h3>
-                <span>Future Interns • 2026</span>
-                <p>
-                    Working on responsive web systems, backend integrations,
-                    deployment pipelines, and professional UI experiences.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="education">
-    <div class="section-title">
-        <h2>Education</h2>
-        <p>Academic background and qualifications</p>
-    </div>
-    <div class="education-box">
-        <div class="education-grid">
-            <div class="education-card">
-                <img src="assets/education-campus.svg" alt="Computer science education illustration" class="education-image">
-                <h3>BTech Computer Science</h3>
-                <span>4th Year Engineering Student</span>
-                <p>
-                    Focused on software engineering, artificial intelligence,
-                    database systems, operating systems, and scalable application development.
-                </p>
-            </div>
-            <div class="education-card">
-                <h3>Certifications & Courses</h3>
-                <span>Ongoing</span>
-                <p>
-                    Add certification names, online courses, and workshops here.
-                </p>
-            </div>
-        </div>
     </div>
 </section>
 

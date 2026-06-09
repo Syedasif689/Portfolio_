@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Education</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+    <div class="custom-cursor"></div> 
+    <div class="section-title">
+        <h2>Education</h2>
+        <p>Academic background and qualifications</p>
+    </div>
+    <div class="education-box">
+        <div class="education-grid">
+            <div class="education-card">
+                <img src="assets/education-campus.svg" alt="Computer science education illustration" class="education-image" onerror="this.style.display='none'">
+                <h3>BTech Computer Science</h3>
+                <span>4th Year Engineering Student</span>
+                <p>
+                    Focused on software engineering, artificial intelligence,
+                    database systems, operating systems, and scalable application development.
+                </p>
+            </div>
+            <div class="education-card">
+                <h3>Certifications & Courses</h3>
+                <span>Ongoing</span>
+                <p>
+                    Full Stack Web Development, AI Foundations, Spring Boot Mastery.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>    
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+document.addEventListener('mouseleave', () => {
+    cursor.classList.add('is-hidden');
+});
+
+document.addEventListener('mouseenter', () => {
+    cursor.classList.remove('is-hidden');
+});
+</script>
+<footer>
+    <p>© 2026 Syed Asif • Professional Portfolio Website</p>
+</footer>
+
+</body>
+</html>

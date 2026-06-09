@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio|About</title>
+    
+    <link rel="stylesheet" href="portfolio.css">
+
+</head>
+
+<body>
+    <div class="custom-cursor"></div>
+    <div class="section-title">
+        <h2>About Me</h2>
+        <p>A little more about how I build and think</p>
+    </div>
+    <div class="about-card">
+        <div class="about-content">
+            <h3>Full Stack Developer focused on practical, polished software</h3>
+            <p>
+                I am Syed Asif, a computer science engineering student who enjoys building
+                responsive web applications, clean backend systems, AI-powered tools, and
+                dashboards that make information easier to understand.
+            </p>
+            <p>
+                My work combines frontend detail, backend structure, database design, and
+                deployment thinking so projects feel complete from idea to live product.
+            </p>
+        </div>
+        <div class="about-highlights">
+            <div>
+                <span>01</span>
+                <p>Clean responsive interfaces</p>
+            </div>
+            <div>
+                <span>02</span>
+                <p>Scalable backend workflows</p>
+            </div>
+            <div>
+                <span>03</span>
+                <p>AI and dashboard features</p>
+            </div>
+        </div>
+    </div>
+<div class="about-box">
+    <h3>My Mission</h3>
+    <p>
+        My goal is to build innovative software products that improve productivity, education, and everyday life while continuously growing as a software engineer.
+    </p>
+</div>
+<div class="about-box">
+    <h3>What I Do</h3>
+    <ul>
+        <li>Full Stack Web Development</li>
+
+        <li>Java Application Development</li>
+        
+        <li>Python Programming</li>
+        
+        <li>AI & Machine Learning Projects</li>
+        
+        <li>Database Design and Management</li>
+    </ul>
+</div>
+<div class="about-box">
+    <h3>Technologies I Use</h3>
+    <p>
+       • Java <br>• Python <br>• HTML <br>• CSS <br>• JavaScript <br>• MySQL <br>• Flask <br>• Git <br>• GitHub <br>• Machine Learning and Artificial Intelligence.
+    </p>
+</div>
+    <script>
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+document.addEventListener('mouseleave', () => {
+    cursor.classList.add('is-hidden');
+});
+
+document.addEventListener('mouseenter', () => {
+    cursor.classList.remove('is-hidden');
+});
+
+</script>
+<footer>
+    <p>© 2026 Syed Asif • Professional Portfolio Website</p>
+</footer>
+</body>
+</html>
