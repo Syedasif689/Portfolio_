@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Resume</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<div class="custom-cursor"></div>
+
+<nav>
+    <div class="nav-links">
+        <a href="index.html" class="contact-btn">go to home</a>
+    </div>
+</nav>
+
+<div class="section-title">
+    <h2>Resume</h2>
+    <p>Education, skills, projects and professional profile</p>
+</div>
+
+<div class="experience-box">
+
+    <div class="exp-item">
+        <div class="exp-content">
+            <span>Profile Summary</span>
+            <p>
+                Final-year Computer Science Engineering student with
+                experience in Full Stack Development, Java, Spring Boot,
+                Database Management Systems, and AI-powered applications.
+                Passionate about building software that solves real-world problems.
+            </p>
+        </div>
+    </div>
+
+    <div class="exp-item">
+        <div class="exp-content">
+            <span>Education</span>
+            <p>
+                Bachelor of Technology (B.Tech) in Computer Science Engineering
+                <br>
+                Final Year Student
+            </p>
+        </div>
+    </div>
+
+    <div class="exp-item">
+        <div class="exp-content">
+            <span>Technical Skills</span>
+            <p>
+                Java • Spring Boot • Python • HTML • CSS • JavaScript •
+                MySQL • DBMS • Full Stack Development • AI & Machine Learning
+            </p>
+        </div>
+    </div>
+
+    <div class="exp-item">
+        <div class="exp-content">
+            <span>Projects</span>
+            <p>
+                • SmartInsight Dashboard Generator
+                <br>
+                • Student Performance Predictor
+                <br>
+                • Personal Portfolio Website
+                <br>
+                • Document Generator Application
+            </p>
+        </div>
+    </div>
+
+    <div class="exp-item">
+        <div class="exp-content">
+            <span>Experience</span>
+            <p>
+                ExcelR Internship (2026)
+                <br>
+                Worked on web development, backend integrations,
+                deployment workflows, and responsive user interfaces.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<div style="text-align:center; margin-top:40px;">
+    <a href="assets/Resume.pdf" class="btn primary-btn" download>
+        Download Resume
+    </a>
+</div>
+
+<script>
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+document.addEventListener('mouseleave', () => {
+    cursor.classList.add('is-hidden');
+});
+
+document.addEventListener('mouseenter', () => {
+    cursor.classList.remove('is-hidden');
+});
+</script>
+
+<footer>
+    <p>© 2026 Syed Asif • Professional Portfolio Website</p>
+</footer>
+
+</body>
+</html>

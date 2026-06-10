@@ -12,7 +12,7 @@
 <nav>
     <div class="logo"> ASIF.</div>
     <div class="nav-links">
-        
+        <a href="resume.html">Resume</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="skills.html">Skills</a>
@@ -44,7 +44,7 @@
                 
                 <div class="hero-buttons">
                     <a href="projects.html" class="btn primary-btn">View My Work</a>
-                    <a href="#contact" class="btn secondary-btn">Hire Me</a>
+                    <a href="contact.html" class="btn secondary-btn">Hire Me</a>
                 </div>
         
                 <div class="stats">
@@ -101,20 +101,52 @@
 
 <script src="script.js"></script>
 <script>
-const text = "Hello, I'm Syed Asif";
-const typingElement = document.querySelector(".typing-text");
+const words = [
+    "Hello I am Syed Asif",
+    "Developer",
+    "Learner",
+    "AI Enthusiast"
+];
 
-let index = 0;
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-function typeWriter() {
-    if (index < text.length) {
-        typingElement.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, 120);
+const typingText = document.querySelector(".typing-text");
+
+function typeEffect() {
+
+    const currentWord = words[wordIndex];
+
+    if (!isDeleting) {
+        typingText.textContent =
+            currentWord.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === currentWord.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 1500);
+            return;
+        }
+    } else {
+        typingText.textContent =
+            currentWord.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+            isDeleting = false;
+            wordIndex++;
+
+            if (wordIndex >= words.length) {
+                wordIndex = 0;
+            }
+        }
     }
+
+    setTimeout(typeEffect, isDeleting ? 80 : 120);
 }
 
-window.onload = typeWriter;
+typeEffect();
 </script>
 </body>
 </html>

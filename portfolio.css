@@ -179,7 +179,18 @@ nav {
 .nav-links a:hover {
     color: #00bfff;
 }
+.typing-text{
+    color:#00ff66;
+    border-right:3px solid #00ff66;
+    padding-right:5px;
+    animation:blink 0.8s infinite;
+}
 
+@keyframes blink{
+    50%{
+        border-color:transparent;
+    }
+}
 .contact-btn {
     background: linear-gradient(135deg, #00bfff, #0077ff);
     color: white !important;
