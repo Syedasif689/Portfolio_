@@ -202,6 +202,7 @@ nav {
     position: relative;
     overflow: hidden;
     width: 100%;
+  
 }
 
 .hero::before {
@@ -237,6 +238,7 @@ nav {
     padding: 50px;
     box-shadow: 0 30px 80px rgba(0, 119, 255, 0.12);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+      scroll-behavior: smooth;
 }
 
 .hero-card:hover {
@@ -982,11 +984,13 @@ section {
 }
 
 .contact-cards {
-    width: 360px;
+    
+    width: 250px;
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
+
 
 .contact-card {
     background: linear-gradient(180deg, rgba(2, 6, 23, 0.95), rgba(3, 12, 28, 0.88));
@@ -1007,13 +1011,11 @@ section {
     text-decoration: none;
     display: block;
 }
-
 footer {
     text-align: center;
     padding: 40px;
     color: #94a3b8;
 }
-
 /* ========== RESPONSIVE DESIGN ========== */
 
 /* Tablet and smaller desktop */

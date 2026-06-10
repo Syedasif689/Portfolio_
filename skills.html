@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Skills</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<div class="custom-cursor"></div>
+
+<nav>
+    <div class="nav-links">
+        <a href="index.html" class="contact-btn">go to home</a>
+    </div>
+</nav>
+
+<div class="section-title">
+    <h2>Skills</h2>
+    <p>Technologies and tools I use</p>
+</div>
+
+<div class="experience-box">
+
+    <div class="exp-item">
+        <img src="assets/java.jpg" alt="Java" class="exp-image" onerror="this.style.display='none'">
+        <div class="exp-content">
+            <span>Java</span>
+            <p>
+                Strong understanding of Object-Oriented Programming,
+                Collections Framework, Exception Handling, Multithreading,
+                and Core Java concepts.
+            </p>
+        </div>
+    </div>
+
+    <div class="exp-item">
+        <img src="assets/springboot.jpg" alt="Spring Boot" class="exp-image" onerror="this.style.display='none'">
+        <div class="exp-content">
+            <span>Spring Boot</span>
+            <p>
+                Building REST APIs, backend services, authentication systems,
+                database integration, and scalable web applications.
+            </p>
+        </div>
+    </div>
+
+    <div class="exp-item">
+        <img src="assets/dbms.jpg" alt="DBMS" class="exp-image" onerror="this.style.display='none'">
+        <div class="exp-content">
+            <span>DBMS</span>
+            <p>
+                Database design, SQL queries, normalization,
+                relationships, indexing, and efficient data management.
+            </p>
+        </div>
+    </div>
+
+    <div class="exp-item">
+        <img src="assets/frontend.jpg" alt="Frontend" class="exp-image" onerror="this.style.display='none'">
+        <div class="exp-content">
+            <span>Frontend Development</span>
+            <p>
+                Creating responsive and modern user interfaces using
+                HTML, CSS, JavaScript, animations, and mobile-first design.
+            </p>
+        </div>
+    </div>
+
+    <div class="exp-item">
+        <img src="assets/backend.jpg" alt="Backend" class="exp-image" onerror="this.style.display='none'">
+        <div class="exp-content">
+            <span>Backend Development</span>
+            <p>
+                Developing server-side applications, APIs,
+                business logic, database connectivity, and deployment workflows.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+document.addEventListener('mouseleave', () => {
+    cursor.classList.add('is-hidden');
+});
+
+document.addEventListener('mouseenter', () => {
+    cursor.classList.remove('is-hidden');
+});
+</script>
+
+<footer>
+    <p>© 2026 Syed Asif • Professional Portfolio Website</p>
+</footer>
+
+</body>
+</html>

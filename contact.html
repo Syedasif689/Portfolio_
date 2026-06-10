@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Contact</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+    <div class="custom-cursor"></div> 
+     <nav>
+      <div class="nav-links">
+        <a href="index.html" class="contact-btn">go to home</a>
+     </div>
+    </nav>
+
+    <div class="contact-section">
+        <div class="contact-inner">
+            <div class="contact-info">
+                <h2>Let's Work Together</h2>
+                <p>
+                    Interested in collaborating on modern web applications, AI systems, or
+                    professional software solutions? Use the contact cards to reach me directly.
+                </p>
+            </div>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <a href="mailto:email-asifsaed635@gmail.com" class="contact-link">📧 Visit my @email</a>
+                </div>
+                <div class="contact-card">
+                    <a href="https://github.com/Syedasif689" target="_blank" rel="noopener" class="contact-link">🐙 GitHub — Syedasif689</a>
+                </div>
+                <div class="contact-card">
+                    <a href="https://www.linkedin.com/in/syed-asif-a68a85291/" target="_blank" rel="noopener" class="contact-link">🔗 LinkedIn — Syed Asif</a>
+                </div>
+                <div class="contact-card">
+                    <a href="tel:+918125814157" class="contact-link">📞 +91 8125814157</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>    
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+document.addEventListener('mouseleave', () => {
+    cursor.classList.add('is-hidden');
+});
+
+document.addEventListener('mouseenter', () => {
+    cursor.classList.remove('is-hidden');
+});
+</script>
+<footer>
+    <p>© 2026 Syed Asif • Professional Portfolio Website</p>
+</footer>
+</body>
+</html>
