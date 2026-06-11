@@ -71,7 +71,7 @@ button,
 body {
     background: linear-gradient(135deg, #031225 0%, #071836 33%, #0b2a62 66%, #071225 100%);
     background-size: 400% 400%;
-    animation: pageFlow 24s ease-in-out infinite;
+    animation:none;
     color: #111827;
     padding-top: 100px;
     position: relative;
@@ -127,7 +127,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index: 999999;
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(8px);
     background: rgba(7, 18, 37, 0.95);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
@@ -245,7 +245,7 @@ nav {
     background: rgba(8, 23, 45, 0.82);
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 40px;
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(10px);
     padding: 50px;
     box-shadow: 0 30px 80px rgba(0, 119, 255, 0.12);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
