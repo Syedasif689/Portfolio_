@@ -506,7 +506,7 @@ nav {
     background-size: 300% 100%;
     border-radius: 32px;
     z-index: -2;
-    animation: borderTravel 4s linear infinite;
+    animation:none;
     filter: blur(4px);
 }
 

@@ -17,26 +17,20 @@ document.addEventListener('DOMContentLoaded', function(){
         customCursor.classList.toggle('is-pointer', Boolean(pointerTarget) && !isScrolling);
     }
 
-    function animateCursor(){
-        cursorX += (lastMouseX - cursorX) * 0.22;
-        cursorY += (lastMouseY - cursorY) * 0.22;
-        customCursor.style.left = cursorX + 'px';
-        customCursor.style.top = cursorY + 'px';
-        requestAnimationFrame(animateCursor);
-    }
+        const cursor = document.querySelector('.custom-cursor');
 
-    document.addEventListener('mousemove', function(e){
-        lastMouseX = e.clientX;
-        lastMouseY = e.clientY;
-        if(!cursorReady){
-            cursorReady = true;
-            cursorX = lastMouseX;
-            cursorY = lastMouseY;
-            requestAnimationFrame(animateCursor);
-        }
-        customCursor.classList.remove('is-hidden');
-        updatePointerState(e.target);
-    });
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+document.addEventListener('mouseleave', () => {
+    cursor.classList.add('is-hidden');
+});
+
+document.addEventListener('mouseenter', () => {
+    cursor.classList.remove('is-hidden');
+});
 
     document.addEventListener('mouseleave', function(){
         customCursor.classList.add('is-hidden');
