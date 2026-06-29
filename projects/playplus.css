@@ -1,0 +1,325 @@
+/* =========================
+   PROJECT DETAILS PAGE
+========================= */
+
+body {
+    background: linear-gradient(
+        135deg,
+        #020617 0%,
+        #0f172a 50%,
+        #111827 100%
+    );
+    color: white;
+    min-height: 100vh;
+}
+
+/* Hero Section */
+
+.project-hero {
+    max-width: 1200px;
+    margin: 100px auto 60px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.project-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #00ff66;
+}
+
+.project-hero p {
+    max-width: 850px;
+    margin: auto;
+    color: #d1d5db;
+    line-height: 1.9;
+    font-size: 1.15rem;
+}
+
+/* Buttons */
+
+.project-links {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Sections */
+
+.project-section {
+    width: min(1200px, 92%);
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 25px;
+
+    background: rgba(15, 23, 42, 0.75);
+
+    border: 1px solid rgba(0, 191, 255, 0.15);
+
+    backdrop-filter: blur(15px);
+
+    transition: 0.3s ease;
+}
+
+.project-section:hover {
+    border-color: rgba(0, 255, 102, 0.25);
+}
+
+.project-section h2 {
+    color: #00ff66;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.project-section p {
+    color: #d1d5db;
+    line-height: 1.9;
+}
+/* =========================
+   PROJECT BUTTONS
+========================= */
+
+.project-links {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+}
+
+/* Live Demo Button */
+
+.live-btn {
+    background: linear-gradient(
+        135deg,
+        #00ff66,
+        #00c853
+    );
+
+    color: #000;
+
+    box-shadow: 0 10px 25px rgba(0,255,102,0.25);
+}
+
+.live-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 35px rgba(0,255,102,0.4);
+}
+
+/* Frontend Code Button */
+
+.frontend-btn {
+    background: rgba(0,191,255,0.12);
+
+    border: 1px solid rgba(0,191,255,0.25);
+
+    color: #00bfff;
+}
+
+.frontend-btn:hover {
+    transform: translateY(-4px);
+
+    background: rgba(0,191,255,0.2);
+
+    box-shadow: 0 10px 25px rgba(0,191,255,0.25);
+}
+
+/* Backend Code Button */
+
+.backend-btn {
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    color: #ffffff;
+}
+
+.backend-btn:hover {
+    transform: translateY(-4px);
+
+    background: rgba(255,255,255,0.1);
+
+    box-shadow: 0 10px 25px rgba(255,255,255,0.12);
+}
+
+/* Font Awesome Icons */
+
+.project-btn i {
+    font-size: 16px;
+}
+/* Tech Stack */
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech-stack span {
+    padding: 10px 18px;
+    border-radius: 25px;
+
+    background: rgba(0, 191, 255, 0.12);
+
+    border: 1px solid rgba(0, 191, 255, 0.2);
+
+    color: #00bfff;
+
+    transition: 0.3s ease;
+}
+
+.tech-stack span:hover {
+    transform: translateY(-4px);
+
+    color: #00ff66;
+
+    border-color: rgba(0,255,102,0.4);
+}
+
+/* Features */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(255,255,255,0.05);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(0,255,102,0.25);
+}
+
+.feature-card h3 {
+    color: #00ff66;
+    margin-bottom: 10px;
+}
+
+/* Workflow */
+
+.workflow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.workflow-step {
+    width: 200px;
+
+    background: rgba(0,191,255,0.08);
+
+    border: 1px solid rgba(0,191,255,0.15);
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    text-align: center;
+}
+
+.workflow-step span {
+    display: block;
+
+    color: #00ff66;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+/* Screenshots */
+
+.screenshot-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+
+    gap: 25px;
+}
+
+.screenshot-grid img {
+    width: 100%;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.4s ease;
+}
+
+.screenshot-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* Contributions */
+
+.contribution-list li {
+    margin-bottom: 15px;
+
+    color: #d1d5db;
+}
+
+/* Footer */
+
+.project-footer {
+    text-align: center;
+
+    padding: 40px;
+
+    color: #94a3b8;
+}
+@media(max-width:768px){
+
+    .project-hero h1{
+        font-size:2.5rem;
+    }
+
+    .project-section{
+        padding:25px;
+    }
+
+    .workflow-step{
+        width:100%;
+    }
+
+    .project-links{
+        flex-direction:column;
+        align-items:center;
+    }
+}

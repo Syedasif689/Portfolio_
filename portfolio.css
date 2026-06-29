@@ -100,7 +100,9 @@ body::before {
     z-index: -1;
     pointer-events: none;
 }
-
+.project-btn i{
+    margin-right:8px;
+}
 body::after {
     content: '';
     position: fixed;

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Projects</title>
+    <link rel="stylesheet" href="../portfolio.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    
+    <nav>
+        <div class="nav-links">
+            <a href="../index.html" class="contact-btn">← Go to Home</a>
+        </div>
+    </nav>
+    
+    <section>
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+            <p>Professional applications and modern development projects</p>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Project 1: DocGen -->
+            <div class="project-card project-card-Docgen1"  onclick="window.location.href='docgen.html'"> >
+                <div class="project-content">
+                    <h3>DocGen Platform</h3>
+                    <p>
+                        Advanced document generation platform with PDF export support for resumes,
+                        invitation cards, letters, and registration forms.
+                    </p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://docgen-get-your-document.onrender.com/" 
+                       target="_blank" 
+                       class="btn primary-btn">
+                      <i class="fa-solid fa-globe"></i>
+                        Live Demo
+                    </a><a href="https://github.com/Syedasif689/SmartInsight/tree/main"
+                   target="_blank"
+                  class="btn secondary-btn">
+                    <i class="fa-brands fa-github"></i>
+                   github
+                  </a>
+                </div>
+            </div>
+            
+            <!-- Project 2: SmartInsight -->
+            <div class="project-card project-card-dashboard" onclick="window.location.href='smartinsight.html'">               
+          <div class="project-content">
+                    <h3>SmartInsight Dashboard</h3>
+                    <p>
+                        AI-powered dashboard generator that transforms uploaded data into beautiful,
+                        understandable analytics dashboards and charts (work in progress).
+                    </p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://smartinsight-76hk.onrender.com" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn primary-btn">
+                       <i class="fa-solid fa-globe"></i> 
+                        Live Demo
+                    </a>
+                    <a href="https://github.com/Syedasif689/SmartInsight/tree/main"
+                   target="_blank"
+                  class="btn secondary-btn">
+                    <i class="fa-brands fa-github"></i>
+                   github
+                  </a>
+                </div>
+            </div>
+            
+            <!-- Project 3: Play+ -->
+       <div class="project-card project-card-playplus"
+          onclick="window.location.href='playplus.html'">               
+          <div class="project-content">
+                    <span class="project-badge">Java Full Stack</span>
+                    <h3>Play+ Video Streaming Platform</h3>
+                    <p>
+                        Full-stack video streaming platform built with Java Spring Boot,
+                        React, JWT Authentication, and MySQL. Users can upload videos,
+                        stream content, manage channels, subscribe to creators, and
+                        maintain personalized profiles.
+                    </p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://play-plus-enter.vercel.app/"
+                       target="_blank"
+                       
+                       class="btn primary-btn">
+                       <i class="fa-solid fa-globe"></i> 
+                        Live Demo
+                    </a>
+                    <a href="https://github.com/Syedasif689/Playplus_frontend"
+                      target="_blank"
+                      class="btn secondary-btn">
+
+                      <i class="fa-brands fa-github"></i>
+                      Frontend Code
+                    </a>
+                    <a href="https://github.com/Syedasif689/Playplus_backend"
+                       target="_blank"
+                       class="btn secondary-btn">
+                          <i class="fa-brands fa-github"></i>
+
+                       Backend Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.classList.add('is-hidden');
+        });
+
+        document.addEventListener('mouseenter', () => {
+            cursor.classList.remove('is-hidden');
+        });
+    </script>
+    
+    <footer>
+        <p>© 2026 Syed Asif • Professional Portfolio Website</p>
+    </footer>
+</body>
+</html>

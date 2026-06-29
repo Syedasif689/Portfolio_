@@ -1,0 +1,424 @@
+/* =========================
+   GLOBAL PROJECT PAGE
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+
+    background:
+        radial-gradient(circle at top left,#0f172a,#020617),
+        linear-gradient(135deg,#020617,#111827);
+
+    color:white;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(circle at 20% 20%,rgba(0,255,102,0.08),transparent 30%),
+        radial-gradient(circle at 80% 30%,rgba(0,191,255,0.08),transparent 30%),
+        radial-gradient(circle at 50% 80%,rgba(255,255,255,0.03),transparent 30%);
+
+    animation: backgroundMove 12s ease-in-out infinite alternate;
+
+    z-index:-1;
+}
+
+@keyframes backgroundMove{
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform:translateY(-30px);
+    }
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.project-hero{
+    width:min(1200px,92%);
+    margin:120px auto 80px;
+    text-align:center;
+
+    animation:fadeUp 1s ease;
+}
+
+.project-hero h1{
+    font-size:4rem;
+
+    background:linear-gradient(
+        135deg,
+        #00ff66,
+        #00bfff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:20px;
+}
+
+.project-hero p{
+    max-width:850px;
+    margin:auto;
+
+    color:#cbd5e1;
+
+    line-height:1.9;
+    font-size:1.15rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.project-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:35px;
+}
+
+.project-btn{
+    padding:15px 28px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:0.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.project-btn:hover{
+    transform:translateY(-5px);
+}
+
+.live-btn{
+    background:linear-gradient(
+        135deg,
+        #00ff66,
+        #00c853
+    );
+
+    color:black;
+
+    box-shadow:0 10px 30px rgba(0,255,102,.25);
+}
+
+.frontend-btn{
+    background:rgba(0,191,255,.12);
+
+    color:#00bfff;
+
+    border:1px solid rgba(0,191,255,.25);
+}
+
+.backend-btn{
+    background:rgba(255,255,255,.05);
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+/* =========================
+   SECTION CARD
+========================= */
+
+.project-section{
+    width:min(1200px,92%);
+
+    margin:50px auto;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    background:rgba(15,23,42,.75);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s ease;
+}
+
+.project-section:hover{
+    border-color:rgba(0,255,102,.25);
+
+    transform:translateY(-4px);
+}
+
+.project-section h2{
+    color:#00ff66;
+
+    margin-bottom:25px;
+
+    font-size:2rem;
+}
+
+.project-section p{
+    color:#cbd5e1;
+
+    line-height:1.9;
+}
+
+/* =========================
+   TECH STACK
+========================= */
+
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.tech-stack span{
+    padding:10px 18px;
+
+    border-radius:25px;
+
+    background:rgba(0,191,255,.12);
+
+    border:1px solid rgba(0,191,255,.2);
+
+    color:#00bfff;
+
+    transition:.3s ease;
+}
+
+.tech-stack span:hover{
+    transform:translateY(-4px);
+
+    color:#00ff66;
+
+    border-color:#00ff66;
+}
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.features-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+}
+
+.feature-card{
+    background:rgba(255,255,255,.04);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s ease;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+
+    border-color:rgba(0,255,102,.3);
+
+    box-shadow:
+    0 20px 40px rgba(0,255,102,.12);
+}
+
+.feature-card h3{
+    color:#00ff66;
+
+    margin-bottom:12px;
+}
+
+/* =========================
+   WORKFLOW
+========================= */
+
+.workflow{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.workflow-step{
+    width:220px;
+
+    padding:25px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:rgba(0,191,255,.08);
+
+    border:1px solid rgba(0,191,255,.15);
+
+    transition:.3s ease;
+}
+
+.workflow-step:hover{
+    transform:translateY(-8px);
+}
+
+.workflow-step span{
+    display:block;
+
+    color:#00ff66;
+
+    font-size:1.2rem;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.project-stats{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.stat-box{
+    min-width:180px;
+
+    padding:25px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s ease;
+}
+
+.stat-box:hover{
+    transform:translateY(-8px);
+}
+
+.stat-box h3{
+    color:#00ff66;
+
+    font-size:2rem;
+}
+
+.stat-box p{
+    color:#94a3b8;
+}
+
+/* =========================
+   SCREENSHOTS
+========================= */
+
+.screenshot-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(350px,1fr));
+
+    gap:25px;
+}
+
+.screenshot-grid img{
+    width:100%;
+
+    border-radius:20px;
+
+    transition:.4s ease;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.screenshot-grid img:hover{
+    transform:scale(1.03);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.project-footer{
+    text-align:center;
+    padding:40px;
+    color:#94a3b8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .project-hero h1{
+        font-size:2.6rem;
+    }
+
+    .project-section{
+        padding:25px;
+    }
+
+    .workflow-step{
+        width:100%;
+    }
+
+    .project-links{
+        flex-direction:column;
+        align-items:center;
+    }
+}

@@ -1,0 +1,408 @@
+/* =========================
+   SMARTINSIGHT PAGE
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(0,191,255,.12),
+        transparent 30%),
+
+        radial-gradient(circle at bottom left,
+        rgba(168,85,247,.12),
+        transparent 30%),
+
+        linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #111827);
+
+    color:white;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.project-hero{
+    width:min(1200px,92%);
+    margin:120px auto 80px;
+    text-align:center;
+
+    animation:fadeUp 1s ease;
+}
+
+.project-hero h1{
+    font-size:4rem;
+
+    background:linear-gradient(
+        135deg,
+        #00bfff,
+        #a855f7
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:20px;
+}
+
+.project-hero p{
+    max-width:850px;
+    margin:auto;
+
+    color:#cbd5e1;
+
+    line-height:1.9;
+}
+
+/* =========================
+   PROJECT BUTTONS
+========================= */
+
+.project-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:35px;
+}
+
+.project-btn{
+    padding:14px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s ease;
+}
+
+.project-btn:hover{
+    transform:translateY(-5px);
+}
+
+.live-btn{
+    background:linear-gradient(
+        135deg,
+        #00bfff,
+        #2563eb
+    );
+
+    color:white;
+}
+
+.frontend-btn{
+    background:rgba(168,85,247,.12);
+
+    border:1px solid rgba(168,85,247,.3);
+
+    color:#c084fc;
+}
+
+/* =========================
+   SECTION CARDS
+========================= */
+
+.project-section{
+    width:min(1200px,92%);
+    margin:50px auto;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:rgba(15,23,42,.75);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s ease;
+}
+
+.project-section:hover{
+    transform:translateY(-5px);
+
+    border-color:rgba(0,191,255,.25);
+}
+
+.project-section h2{
+    color:#00bfff;
+
+    margin-bottom:25px;
+
+    font-size:2rem;
+}
+
+.project-section p{
+    color:#cbd5e1;
+
+    line-height:1.9;
+}
+
+/* =========================
+   TECH STACK
+========================= */
+
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.tech-stack span{
+    padding:10px 18px;
+
+    border-radius:25px;
+
+    background:rgba(0,191,255,.12);
+
+    border:1px solid rgba(0,191,255,.2);
+
+    color:#38bdf8;
+
+    transition:.3s ease;
+}
+
+.tech-stack span:hover{
+    transform:translateY(-4px);
+
+    border-color:#a855f7;
+
+    color:#c084fc;
+}
+
+/* =========================
+   FEATURES GRID
+========================= */
+
+.features-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+}
+
+.feature-card{
+    background:rgba(255,255,255,.04);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s ease;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+
+    border-color:rgba(0,191,255,.3);
+
+    box-shadow:
+    0 20px 40px rgba(0,191,255,.12);
+}
+
+.feature-card h3{
+    color:#38bdf8;
+
+    margin-bottom:12px;
+}
+
+.feature-card p{
+    color:#cbd5e1;
+}
+
+/* =========================
+   WORKFLOW
+========================= */
+
+.workflow{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.workflow-step{
+    width:220px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    background:rgba(168,85,247,.08);
+
+    border:1px solid rgba(168,85,247,.2);
+
+    transition:.3s ease;
+}
+
+.workflow-step:hover{
+    transform:translateY(-8px);
+}
+
+.workflow-step span{
+    display:block;
+
+    font-weight:bold;
+
+    color:#c084fc;
+
+    margin-bottom:10px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.project-stats{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.stat-box{
+    min-width:180px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s ease;
+}
+
+.stat-box:hover{
+    transform:translateY(-8px);
+}
+
+.stat-box h3{
+    color:#38bdf8;
+
+    font-size:2rem;
+}
+
+.stat-box p{
+    color:#94a3b8;
+}
+
+/* =========================
+   SCREENSHOTS
+========================= */
+
+.screenshot-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(350px,1fr));
+
+    gap:25px;
+}
+
+.screenshot-grid img{
+    width:100%;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s ease;
+}
+
+.screenshot-grid img:hover{
+    transform:scale(1.03);
+}
+
+/* =========================
+   CONTRIBUTIONS
+========================= */
+
+.contribution-list{
+    padding-left:20px;
+}
+
+.contribution-list li{
+    margin-bottom:15px;
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.project-footer{
+    text-align:center;
+
+    padding:40px;
+
+    color:#94a3b8;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .project-hero h1{
+        font-size:2.5rem;
+    }
+
+    .project-section{
+        padding:25px;
+    }
+
+    .workflow-step{
+        width:100%;
+    }
+
+    .project-links{
+        flex-direction:column;
+        align-items:center;
+    }
+}
