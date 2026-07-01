@@ -376,6 +376,10 @@ body {
 
 /* Screenshots */
 
+/* =========================
+   SCREENSHOTS SECTION
+========================= */
+
 .screenshots-container{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -390,6 +394,12 @@ body {
     transition:.3s ease;
 }
 
+.screenshot-card:hover{
+    transform:translateY(-8px);
+    border-color:#00ff66;
+    box-shadow:0 20px 40px rgba(0,255,102,.15);
+}
+
 .screenshot-card img{
     width:100%;
     height:auto;
@@ -397,17 +407,11 @@ body {
     border-radius:12px;
 }
 
-.screenshot-card:hover{
-    transform:translateY(-8px);
-    border-color:#00ff66;
-}
-
 .screenshot-card h3{
     text-align:center;
     margin-top:15px;
     color:#00ff66;
 }
-
 /* Contributions */
 
 .contribution-list li {
@@ -415,33 +419,27 @@ body {
 
     color: #d1d5db;
 }
+/* =========================
+   VIDEO DEMO
+========================= */
+
 .video-card{
     background:rgba(255,255,255,.04);
-
     border:1px solid rgba(255,255,255,.08);
-
     border-radius:25px;
-
     overflow:hidden;
-
     transition:.35s ease;
 }
 
 .video-card:hover{
     transform:translateY(-8px);
-
     border-color:#00ff66;
-
-    box-shadow:
-    0 20px 50px rgba(0,255,102,.15);
+    box-shadow:0 20px 50px rgba(0,255,102,.15);
 }
 
 .video-card video{
     width:100%;
     display:block;
-
-    border-bottom:
-    1px solid rgba(255,255,255,.08);
 }
 
 .video-info{
@@ -487,20 +485,47 @@ body {
 }
 @media(max-width:768px){
 
+    .project-hero{
+        margin-top:80px;
+        padding:0 20px;
+    }
+
     .project-hero h1{
-        font-size:2.6rem;
+        font-size:2.4rem;
     }
 
     .project-section{
         padding:25px;
     }
 
+    .project-links{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .project-btn{
+        width:100%;
+        max-width:320px;
+    }
+
     .workflow-step{
         width:100%;
     }
 
-    .project-links{
-        flex-direction:column;
-        align-items:center;
+    .tech-stack{
+        justify-content:center;
+    }
+
+    .screenshots-container{
+        grid-template-columns:1fr;
+    }
+
+    .video-info{
+        padding:20px;
+    }
+
+    .video-card video{
+        max-height:250px;
+        object-fit:cover;
     }
 }
