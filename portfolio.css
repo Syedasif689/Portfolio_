@@ -753,6 +753,9 @@ section {
 .project-card-dashboard {
     --project-image: url('assets/dashboard.jpg');
 }
+.project-card-playplus {
+    --project-image: url('assets/playplus.png');
+}
 
 .project-card:hover::before {
     opacity: 0.78;

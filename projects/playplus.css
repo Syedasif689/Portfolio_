@@ -376,30 +376,38 @@ body {
 
 /* Screenshots */
 
-.screenshot-grid {
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
-
-    gap: 25px;
+.screenshots-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
 }
 
-.screenshot-grid img {
-    width: 100%;
-
-    border-radius: 20px;
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    transition: 0.4s ease;
+.screenshot-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:15px;
+    transition:.3s ease;
 }
 
-.screenshot-grid img:hover{
-    transform:scale(1.04);
-
-    box-shadow:
-    0 20px 40px rgba(0,191,255,.15);
+.screenshot-card img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:12px;
 }
+
+.screenshot-card:hover{
+    transform:translateY(-8px);
+    border-color:#00ff66;
+}
+
+.screenshot-card h3{
+    text-align:center;
+    margin-top:15px;
+    color:#00ff66;
+}
+
 /* Contributions */
 
 .contribution-list li {
@@ -407,7 +415,48 @@ body {
 
     color: #d1d5db;
 }
+.video-card{
+    background:rgba(255,255,255,.04);
 
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+}
+
+.video-card:hover{
+    transform:translateY(-8px);
+
+    border-color:#00ff66;
+
+    box-shadow:
+    0 20px 50px rgba(0,255,102,.15);
+}
+
+.video-card video{
+    width:100%;
+    display:block;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+}
+
+.video-info{
+    padding:25px;
+}
+
+.video-info h3{
+    color:#00ff66;
+    margin-bottom:10px;
+}
+
+.video-info p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
 /* Footer */
 
 .project-footer {
@@ -417,6 +466,7 @@ body {
 
     color: #94a3b8;
 }
+
 @keyframes fadeUp{
     from{
         opacity:0;
@@ -427,6 +477,13 @@ body {
         opacity:1;
         transform:translateY(0);
     }
+}
+@media(max-width:768px){
+
+    .screenshots-container{
+        grid-template-columns:1fr;
+    }
+
 }
 @media(max-width:768px){
 
