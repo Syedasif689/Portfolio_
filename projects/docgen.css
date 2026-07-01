@@ -1,5 +1,5 @@
 /* =========================
-   GLOBAL PROJECT PAGE
+   SMARTINSIGHT PAGE
 ========================= */
 
 *{
@@ -16,40 +16,25 @@ body{
     font-family:'Segoe UI',sans-serif;
 
     background:
-        radial-gradient(circle at top left,#0f172a,#020617),
-        linear-gradient(135deg,#020617,#111827);
+        radial-gradient(circle at top right,
+        rgba(0,191,255,.12),
+        transparent 30%),
+
+        radial-gradient(circle at bottom left,
+        rgba(168,85,247,.12),
+        transparent 30%),
+
+        linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #111827);
 
     color:white;
 
     min-height:100vh;
 
     overflow-x:hidden;
-}
-
-/* Animated Background */
-
-body::before{
-    content:'';
-    position:fixed;
-    inset:0;
-
-    background:
-        radial-gradient(circle at 20% 20%,rgba(0,255,102,0.08),transparent 30%),
-        radial-gradient(circle at 80% 30%,rgba(0,191,255,0.08),transparent 30%),
-        radial-gradient(circle at 50% 80%,rgba(255,255,255,0.03),transparent 30%);
-
-    animation: backgroundMove 12s ease-in-out infinite alternate;
-
-    z-index:-1;
-}
-
-@keyframes backgroundMove{
-    from{
-        transform:translateY(0px);
-    }
-    to{
-        transform:translateY(-30px);
-    }
 }
 
 /* =========================
@@ -69,8 +54,8 @@ body::before{
 
     background:linear-gradient(
         135deg,
-        #00ff66,
-        #00bfff
+        #00bfff,
+        #a855f7
     );
 
     -webkit-background-clip:text;
@@ -86,11 +71,10 @@ body::before{
     color:#cbd5e1;
 
     line-height:1.9;
-    font-size:1.15rem;
 }
 
 /* =========================
-   BUTTONS
+   PROJECT BUTTONS
 ========================= */
 
 .project-links{
@@ -102,19 +86,11 @@ body::before{
 }
 
 .project-btn{
-    padding:15px 28px;
-
+    padding:14px 28px;
     border-radius:50px;
-
     text-decoration:none;
-
     font-weight:600;
-
-    transition:0.35s ease;
-
-    position:relative;
-
-    overflow:hidden;
+    transition:.35s ease;
 }
 
 .project-btn:hover{
@@ -124,61 +100,50 @@ body::before{
 .live-btn{
     background:linear-gradient(
         135deg,
-        #00ff66,
-        #00c853
+        #00bfff,
+        #2563eb
     );
 
-    color:black;
-
-    box-shadow:0 10px 30px rgba(0,255,102,.25);
+    color:white;
 }
 
 .frontend-btn{
-    background:rgba(0,191,255,.12);
+    background:rgba(168,85,247,.12);
 
-    color:#00bfff;
+    border:1px solid rgba(168,85,247,.3);
 
-    border:1px solid rgba(0,191,255,.25);
-}
-
-.backend-btn{
-    background:rgba(255,255,255,.05);
-
-    color:white;
-
-    border:1px solid rgba(255,255,255,.08);
+    color:#c084fc;
 }
 
 /* =========================
-   SECTION CARD
+   SECTION CARDS
 ========================= */
 
 .project-section{
     width:min(1200px,92%);
-
     margin:50px auto;
 
     padding:40px;
 
-    border-radius:28px;
+    border-radius:25px;
 
     background:rgba(15,23,42,.75);
 
-    backdrop-filter:blur(15px);
+    backdrop-filter:blur(12px);
 
     border:1px solid rgba(255,255,255,.08);
 
-    transition:.4s ease;
+    transition:.3s ease;
 }
 
 .project-section:hover{
-    border-color:rgba(0,255,102,.25);
+    transform:translateY(-5px);
 
-    transform:translateY(-4px);
+    border-color:rgba(0,191,255,.25);
 }
 
 .project-section h2{
-    color:#00ff66;
+    color:#00bfff;
 
     margin-bottom:25px;
 
@@ -210,7 +175,7 @@ body::before{
 
     border:1px solid rgba(0,191,255,.2);
 
-    color:#00bfff;
+    color:#38bdf8;
 
     transition:.3s ease;
 }
@@ -218,13 +183,13 @@ body::before{
 .tech-stack span:hover{
     transform:translateY(-4px);
 
-    color:#00ff66;
+    border-color:#a855f7;
 
-    border-color:#00ff66;
+    color:#c084fc;
 }
 
 /* =========================
-   FEATURE CARDS
+   FEATURES GRID
 ========================= */
 
 .features-grid{
@@ -251,16 +216,20 @@ body::before{
 .feature-card:hover{
     transform:translateY(-8px);
 
-    border-color:rgba(0,255,102,.3);
+    border-color:rgba(0,191,255,.3);
 
     box-shadow:
-    0 20px 40px rgba(0,255,102,.12);
+    0 20px 40px rgba(0,191,255,.12);
 }
 
 .feature-card h3{
-    color:#00ff66;
+    color:#38bdf8;
 
     margin-bottom:12px;
+}
+
+.feature-card p{
+    color:#cbd5e1;
 }
 
 /* =========================
@@ -279,13 +248,13 @@ body::before{
 
     padding:25px;
 
-    text-align:center;
-
     border-radius:20px;
 
-    background:rgba(0,191,255,.08);
+    text-align:center;
 
-    border:1px solid rgba(0,191,255,.15);
+    background:rgba(168,85,247,.08);
+
+    border:1px solid rgba(168,85,247,.2);
 
     transition:.3s ease;
 }
@@ -297,11 +266,9 @@ body::before{
 .workflow-step span{
     display:block;
 
-    color:#00ff66;
-
-    font-size:1.2rem;
-
     font-weight:bold;
+
+    color:#c084fc;
 
     margin-bottom:10px;
 }
@@ -322,9 +289,9 @@ body::before{
 
     padding:25px;
 
-    text-align:center;
-
     border-radius:20px;
+
+    text-align:center;
 
     background:rgba(255,255,255,.04);
 
@@ -338,7 +305,7 @@ body::before{
 }
 
 .stat-box h3{
-    color:#00ff66;
+    color:#38bdf8;
 
     font-size:2rem;
 }
@@ -365,9 +332,9 @@ body::before{
 
     border-radius:20px;
 
-    transition:.4s ease;
-
     border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s ease;
 }
 
 .screenshot-grid img:hover{
@@ -375,18 +342,17 @@ body::before{
 }
 
 /* =========================
-   ANIMATIONS
+   CONTRIBUTIONS
 ========================= */
 
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+.contribution-list{
+    padding-left:20px;
+}
+
+.contribution-list li{
+    margin-bottom:15px;
+    line-height:1.8;
+    color:#cbd5e1;
 }
 
 /* =========================
@@ -395,8 +361,26 @@ body::before{
 
 .project-footer{
     text-align:center;
+
     padding:40px;
+
     color:#94a3b8;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 /* =========================
@@ -406,7 +390,7 @@ body::before{
 @media(max-width:768px){
 
     .project-hero h1{
-        font-size:2.6rem;
+        font-size:2.5rem;
     }
 
     .project-section{

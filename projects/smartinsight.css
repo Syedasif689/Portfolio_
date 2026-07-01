@@ -1,5 +1,6 @@
+
 /* =========================
-   SMARTINSIGHT PAGE
+   GLOBAL PROJECT PAGE
 ========================= */
 
 *{
@@ -16,25 +17,40 @@ body{
     font-family:'Segoe UI',sans-serif;
 
     background:
-        radial-gradient(circle at top right,
-        rgba(0,191,255,.12),
-        transparent 30%),
-
-        radial-gradient(circle at bottom left,
-        rgba(168,85,247,.12),
-        transparent 30%),
-
-        linear-gradient(
-        135deg,
-        #020617,
-        #0f172a,
-        #111827);
+        radial-gradient(circle at top left,#0f172a,#020617),
+        linear-gradient(135deg,#020617,#111827);
 
     color:white;
 
     min-height:100vh;
 
     overflow-x:hidden;
+}
+
+/* Animated Background */
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(circle at 20% 20%,rgba(0,255,102,0.08),transparent 30%),
+        radial-gradient(circle at 80% 30%,rgba(0,191,255,0.08),transparent 30%),
+        radial-gradient(circle at 50% 80%,rgba(255,255,255,0.03),transparent 30%);
+
+    animation: backgroundMove 12s ease-in-out infinite alternate;
+
+    z-index:-1;
+}
+
+@keyframes backgroundMove{
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform:translateY(-30px);
+    }
 }
 
 /* =========================
@@ -54,8 +70,8 @@ body{
 
     background:linear-gradient(
         135deg,
-        #00bfff,
-        #a855f7
+        #00ff66,
+        #00bfff
     );
 
     -webkit-background-clip:text;
@@ -71,10 +87,11 @@ body{
     color:#cbd5e1;
 
     line-height:1.9;
+    font-size:1.15rem;
 }
 
 /* =========================
-   PROJECT BUTTONS
+   BUTTONS
 ========================= */
 
 .project-links{
@@ -86,11 +103,19 @@ body{
 }
 
 .project-btn{
-    padding:14px 28px;
+    padding:15px 28px;
+
     border-radius:50px;
+
     text-decoration:none;
+
     font-weight:600;
-    transition:.35s ease;
+
+    transition:0.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
 }
 
 .project-btn:hover{
@@ -100,50 +125,61 @@ body{
 .live-btn{
     background:linear-gradient(
         135deg,
-        #00bfff,
-        #2563eb
+        #00ff66,
+        #00c853
     );
 
-    color:white;
+    color:black;
+
+    box-shadow:0 10px 30px rgba(0,255,102,.25);
 }
 
 .frontend-btn{
-    background:rgba(168,85,247,.12);
+    background:rgba(0,191,255,.12);
 
-    border:1px solid rgba(168,85,247,.3);
+    color:#00bfff;
 
-    color:#c084fc;
+    border:1px solid rgba(0,191,255,.25);
+}
+
+.backend-btn{
+    background:rgba(255,255,255,.05);
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.08);
 }
 
 /* =========================
-   SECTION CARDS
+   SECTION CARD
 ========================= */
 
 .project-section{
     width:min(1200px,92%);
+
     margin:50px auto;
 
     padding:40px;
 
-    border-radius:25px;
+    border-radius:28px;
 
     background:rgba(15,23,42,.75);
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(15px);
 
     border:1px solid rgba(255,255,255,.08);
 
-    transition:.3s ease;
+    transition:.4s ease;
 }
 
 .project-section:hover{
-    transform:translateY(-5px);
+    border-color:rgba(0,255,102,.25);
 
-    border-color:rgba(0,191,255,.25);
+    transform:translateY(-4px);
 }
 
 .project-section h2{
-    color:#00bfff;
+    color:#00ff66;
 
     margin-bottom:25px;
 
@@ -175,7 +211,7 @@ body{
 
     border:1px solid rgba(0,191,255,.2);
 
-    color:#38bdf8;
+    color:#00bfff;
 
     transition:.3s ease;
 }
@@ -183,13 +219,13 @@ body{
 .tech-stack span:hover{
     transform:translateY(-4px);
 
-    border-color:#a855f7;
+    color:#00ff66;
 
-    color:#c084fc;
+    border-color:#00ff66;
 }
 
 /* =========================
-   FEATURES GRID
+   FEATURE CARDS
 ========================= */
 
 .features-grid{
@@ -216,20 +252,16 @@ body{
 .feature-card:hover{
     transform:translateY(-8px);
 
-    border-color:rgba(0,191,255,.3);
+    border-color:rgba(0,255,102,.3);
 
     box-shadow:
-    0 20px 40px rgba(0,191,255,.12);
+    0 20px 40px rgba(0,255,102,.12);
 }
 
 .feature-card h3{
-    color:#38bdf8;
+    color:#00ff66;
 
     margin-bottom:12px;
-}
-
-.feature-card p{
-    color:#cbd5e1;
 }
 
 /* =========================
@@ -248,13 +280,13 @@ body{
 
     padding:25px;
 
-    border-radius:20px;
-
     text-align:center;
 
-    background:rgba(168,85,247,.08);
+    border-radius:20px;
 
-    border:1px solid rgba(168,85,247,.2);
+    background:rgba(0,191,255,.08);
+
+    border:1px solid rgba(0,191,255,.15);
 
     transition:.3s ease;
 }
@@ -266,9 +298,11 @@ body{
 .workflow-step span{
     display:block;
 
-    font-weight:bold;
+    color:#00ff66;
 
-    color:#c084fc;
+    font-size:1.2rem;
+
+    font-weight:bold;
 
     margin-bottom:10px;
 }
@@ -289,9 +323,9 @@ body{
 
     padding:25px;
 
-    border-radius:20px;
-
     text-align:center;
+
+    border-radius:20px;
 
     background:rgba(255,255,255,.04);
 
@@ -305,7 +339,7 @@ body{
 }
 
 .stat-box h3{
-    color:#38bdf8;
+    color:#00ff66;
 
     font-size:2rem;
 }
@@ -332,9 +366,9 @@ body{
 
     border-radius:20px;
 
-    border:1px solid rgba(255,255,255,.08);
-
     transition:.4s ease;
+
+    border:1px solid rgba(255,255,255,.08);
 }
 
 .screenshot-grid img:hover{
@@ -342,17 +376,18 @@ body{
 }
 
 /* =========================
-   CONTRIBUTIONS
+   ANIMATIONS
 ========================= */
 
-.contribution-list{
-    padding-left:20px;
-}
-
-.contribution-list li{
-    margin-bottom:15px;
-    line-height:1.8;
-    color:#cbd5e1;
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 /* =========================
@@ -361,26 +396,8 @@ body{
 
 .project-footer{
     text-align:center;
-
     padding:40px;
-
     color:#94a3b8;
-}
-
-/* =========================
-   ANIMATION
-========================= */
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
 }
 
 /* =========================
@@ -390,7 +407,7 @@ body{
 @media(max-width:768px){
 
     .project-hero h1{
-        font-size:2.5rem;
+        font-size:2.6rem;
     }
 
     .project-section{
