@@ -487,38 +487,20 @@ body {
 }
 @media(max-width:768px){
 
-    .project-hero{
-        margin-top:80px;
-        padding:0 20px;
-    }
-
     .project-hero h1{
-        font-size:2.4rem;
+        font-size:2.6rem;
     }
 
     .project-section{
         padding:25px;
     }
 
-    .project-links{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .project-btn{
-        width:100%;
-        max-width:320px;
-    }
-
     .workflow-step{
         width:100%;
     }
 
-    .tech-stack{
-        justify-content:center;
-    }
-
-    .screenshot-grid{
-        grid-template-columns:1fr;
+    .project-links{
+        flex-direction:column;
+        align-items:center;
     }
 }
