@@ -106,6 +106,45 @@ body{
     color:white;
     border:1px solid rgba(255,255,255,.1);
 }
+.screenshots-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.screenshot-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:15px;
+    transition:.3s ease;
+}
+
+.screenshot-card:hover{
+    transform:translateY(-8px);
+    border-color:#00ff66;
+    box-shadow:0 20px 40px rgba(0,255,102,.15);
+}
+
+.screenshot-card img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:12px;
+}
+
+.screenshot-card h3{
+    text-align:center;
+    margin-top:15px;
+    color:#00ff66;
+}
+/* Contributions */
+
+.contribution-list li {
+    margin-bottom: 15px;
+
+    color: #d1d5db;
+}
 
 /* =========================
    SECTION
