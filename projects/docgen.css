@@ -106,10 +106,15 @@ body{
     color:white;
     border:1px solid rgba(255,255,255,.1);
 }
+/* =========================
+   SCREENSHOTS SECTION
+========================= */
+
 .screenshots-container{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+    gap:30px;
+    margin-top:30px;
 }
 
 .screenshot-card{
@@ -117,13 +122,14 @@ body{
     border:1px solid rgba(255,255,255,.08);
     border-radius:20px;
     padding:15px;
-    transition:.3s ease;
+    overflow:hidden;
+    transition:.35s ease;
 }
 
 .screenshot-card:hover{
     transform:translateY(-8px);
     border-color:#00ff66;
-    box-shadow:0 20px 40px rgba(0,255,102,.15);
+    box-shadow:0 20px 50px rgba(0,255,102,.15);
 }
 
 .screenshot-card img{
@@ -131,12 +137,17 @@ body{
     height:auto;
     display:block;
     border-radius:12px;
+    transition:transform .5s ease;
+}
+.screenshot-card:hover img{
+    transform:scale(1.04);
 }
 
 .screenshot-card h3{
+    padding:18px;
     text-align:center;
-    margin-top:15px;
     color:#00ff66;
+    font-size:1rem;
 }
 /* Contributions */
 
@@ -352,6 +363,36 @@ body{
     .project-hero h1{
         font-size:2.3rem;
     }
+}
+/* Tablet */
+
+@media(max-width:900px){
+
+    .screenshots-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .screenshots-container{
+        gap:20px;
+    }
+
+    .screenshot-card{
+        border-radius:16px;
+    }
+
+    
+
+    .screenshot-card h3{
+        font-size:.9rem;
+        padding:14px;
+    }
+
 }
 
 @media (max-width:480px){
