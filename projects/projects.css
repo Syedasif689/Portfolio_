@@ -1,0 +1,349 @@
+/* ===========================
+   PROJECTS PAGE
+=========================== */
+
+.projects-section{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+    padding:60px 5%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:80px;
+}
+
+.section-title h2{
+    font-size:48px;
+    color:#fff;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#b7c3d3;
+    font-size:18px;
+}
+
+/* ===========================
+   PROJECT ROW
+=========================== */
+
+.project-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    margin:90px 0;
+}
+
+.project-row.reverse{
+    flex-direction:row-reverse;
+}
+
+/* ===========================
+   PROJECT CARD
+=========================== */
+
+.project-card{
+    flex:1;
+    min-height:420px;
+    border-radius:28px;
+    overflow:hidden;
+    cursor:pointer;
+    position:relative;
+    transition:.4s;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.project-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.30);
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 60px rgba(0,191,255,.25);
+}
+
+.project-card:hover::before{
+    background:rgba(0,0,0,.15);
+}
+
+/* Background Images */
+
+.project-card-playplus{
+    background-image:url("../assets/playplus.png");
+}
+
+.project-card-Docgen1{
+    background-image:url("../assets/Docgen1.jpg");
+}
+
+.project-card-dashboard{
+    background-image:url("../assets/dashboard.jpg");
+}
+
+/* Badge */
+
+.project-badge{
+    position:absolute;
+    top:25px;
+    left:25px;
+    z-index:2;
+
+    background:#00bfff;
+    color:#fff;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.project-info{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.project-info h3{
+    color:#fff;
+    font-size:42px;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.project-info p{
+    color:#d9e4ef;
+    line-height:1.9;
+    font-size:17px;
+    margin-bottom:35px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.project-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.project-actions .btn{
+    text-decoration:none;
+    padding:14px 22px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.primary-btn{
+    background:#00bfff;
+    color:#fff;
+}
+
+.primary-btn:hover{
+    background:#0094d8;
+}
+
+.secondary-btn{
+    background:#18263d;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.secondary-btn:hover{
+    background:#223552;
+}
+
+.project-actions i{
+    margin-right:8px;
+}
+
+/* ===========================
+   LARGE DESKTOP
+=========================== */
+
+@media (max-width:1300px){
+
+.project-info h3{
+    font-size:36px;
+}
+
+.project-card{
+    min-height:380px;
+}
+
+}
+
+/* ===========================
+   LAPTOP
+=========================== */
+
+@media (max-width:992px){
+
+.project-row,
+.project-row.reverse{
+
+    flex-direction:column;
+
+    gap:35px;
+
+    margin:70px 0;
+
+}
+
+.project-card{
+
+    width:100%;
+
+    min-height:340px;
+
+}
+
+.project-info{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.project-actions{
+
+    justify-content:center;
+
+}
+
+.project-info h3{
+
+    font-size:34px;
+
+}
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:768px){
+
+.projects-section{
+
+    padding:40px 20px;
+
+}
+
+.section-title{
+
+    margin-bottom:50px;
+
+}
+
+.section-title h2{
+
+    font-size:36px;
+
+}
+
+.project-card{
+
+    min-height:280px;
+
+}
+
+.project-info h3{
+
+    font-size:30px;
+
+}
+
+.project-info p{
+
+    font-size:16px;
+
+}
+
+.project-actions{
+
+    flex-direction:column;
+
+}
+
+.project-actions .btn{
+
+    width:100%;
+
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:480px){
+
+.section-title h2{
+
+    font-size:28px;
+
+}
+
+.section-title p{
+
+    font-size:15px;
+
+}
+
+.project-row{
+
+    margin:50px 0;
+
+}
+
+.project-card{
+
+    min-height:220px;
+
+}
+
+.project-info h3{
+
+    font-size:24px;
+
+}
+
+.project-info p{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+.project-badge{
+
+    font-size:12px;
+
+    padding:8px 14px;
+
+}
+
+}
